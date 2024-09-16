@@ -1,7 +1,7 @@
 node_modules
 
 # DB
-/src/lib/server/database/migrations/
+/src/lib/database/migrations
 
 # Output
 .output
