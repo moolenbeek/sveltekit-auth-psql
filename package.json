@@ -30,6 +30,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@picocss/pico": "^2.0.6"
+		"@picocss/pico": "^2.0.6",
+		"dotenv": "^16.4.5"
 	}
 }
