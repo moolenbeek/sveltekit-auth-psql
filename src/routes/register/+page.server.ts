@@ -12,8 +12,9 @@ export const actions: Actions = {
 
 		password = await new Argon2id().hash(password);
 		const id = crypto.randomUUID();
+		const token = crypto.randomUUID();
 		try {
-			await createUser({ id, email, name, password });
+			await createUser({ id, email, name, password, token });
 		} catch (err) {
 			console.error(err);
 			return fail(400, { message: "Could not register user" });
