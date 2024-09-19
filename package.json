@@ -16,6 +16,7 @@
 		"studio": "drizzle-kit studio"
 	},
 	"dependencies": {
+		"@lucia-auth/adapter-drizzle": "^1.1.0",
 		"@picocss/pico": "^2.0.6",
 		"dotenv": "^16.4.5",
 		"drizzle-orm": "^0.33.0",
