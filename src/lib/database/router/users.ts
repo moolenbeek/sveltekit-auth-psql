@@ -20,3 +20,12 @@ export const createUser = async (user: User) => {
 		return result[0];
 	}
 };
+
+export const getUserByToken = async (token: string) => {
+	const user = await db.select().from(userTable).where(eq(userTable.token, token));
+	if (user.length === 0) {
+		return null;
+	} else {
+		return user[0];
+	}
+};
