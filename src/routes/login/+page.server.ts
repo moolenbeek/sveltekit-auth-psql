@@ -16,12 +16,7 @@ export const actions: Actions = {
 		const email = formData.get("email");
 		const password = formData.get("password");
 
-		if (
-			typeof email !== "string" ||
-			typeof password !== "string" ||
-			!email ||
-			!password
-		) {
+		if (typeof email !== "string" || typeof password !== "string" || !email || !password) {
 			return fail(400, {
 				message: "Invalid email or password"
 			});
@@ -29,15 +24,15 @@ export const actions: Actions = {
 
 		const user = await getUserByEmail(email);
 
-    if (!user || typeof user.password !== 'string') {
-      return fail(400, {
-          message: "Invalid email or password"
-      });
-  }
-  
-  const validPassword = await new Argon2id().verify(user.password, password);
-  
-  if (!validPassword) {
+		if (!user || typeof user.password !== "string") {
+			return fail(400, {
+				message: "Invalid email or password"
+			});
+		}
+
+		const validPassword = await new Argon2id().verify(user.password, password);
+
+		if (!validPassword) {
 			return fail(400, {
 				message: "Invalid email or password"
 			});
@@ -51,9 +46,9 @@ export const actions: Actions = {
 			...sessionCookie.attributes
 		});
 
-    console.log(`Login successful for user: ${email}`);
-    console.log(`Session ID: ${session.id}`);
-    console.log(`Session Cookie: ${sessionCookie.value}`);
+		console.log(`Login successful for user: ${email}`);
+		console.log(`Session ID: ${session.id}`);
+		console.log(`Session Cookie: ${sessionCookie.value}`);
 		throw redirect(302, "/");
 	}
 };
