@@ -1,38 +1,26 @@
-# create-svelte
+# sveltekit-auth-psql
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Sveltekit user auth template using lucia, drizzle, psql, and pico css
+[TypeScript](https://www.typescriptlang.org/), [Svelte](https://svelte.dev), [SvelteKit](https://kit.svelte.dev), [Lucia](https://lucia-auth.com/), [Drizzle](https://orm.drizzle.team/), and [Pico CSS](https://picocss.com/).
 
-## Creating a project
+## Get started
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Clone the repository and navigate to the project directory:
 
 ```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+git clone https://github.com/moolenbeek/sveltekit-auth.git sveltekit-auth
+cd sveltekit-auth
 ```
 
-## Building
-
-To create a production version of your app:
+If you would like to remove existing `.git` repository and re-initialize Git locally:
 
 ```bash
-npm run build
+rm -rf .git
+git init
 ```
 
-You can preview the production build with `npm run preview`.
+Once you've cloned the project, install dependencies with NPM:
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+```bash
+npm install # or `npm i`
+```
