@@ -7,8 +7,8 @@
 <h2>Home</h2>
 
 {#if data.user}
-	<p>User: {data.user.name}!</p>
-	<p>Email: {data.user.email}!</p>
+	<p>User: {data.user.name}</p>
+	<p>Email: {data.user.email}</p>
 {:else}
 	<p>Not logged in</p>
 {/if}
