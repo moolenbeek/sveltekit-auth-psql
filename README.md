@@ -30,6 +30,7 @@ Add the following database parameters to your `.env` without the square brackets
 ```bash
 DATABASE_URL="postgres://[user]:[password]@[host]:[port_number]/[db_name]"
 ```
+
 Generate database
 
 ```bash
@@ -53,4 +54,3 @@ Drizzle studio
 ```bash
 npm run studio
 ```
-

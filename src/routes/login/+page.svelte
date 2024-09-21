@@ -21,4 +21,4 @@
 
 	<button type="submit">Login</button>
 </form>
-<p>Not registered? <a href="/register">Register</a></p>
+<p>Not registered?<a href="/register">Register</a></p>
